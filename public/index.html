@@ -105,11 +105,29 @@ background {
     </header>
     <!-- End header -->
 
-    <div id="lead">
+    <div id="lead" >
         <div id="lead-content">
-           <h1 style=" color: white; display: block"> <span style="color: black; font-size: 40%">
+           <h1 style=" color: white; display: block"> <span style="color: black; font-size: 40%; text-transform: lowercase;">
             
-            
+            <script>
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+              function tp(){  
+                var div = document.getElementById('lead');
+
+                div.style.background='url(images/'+'bg'+Math.floor( getRandomArbitrary(1,9))+".gif)";
+                div.style.backgroundSize='cover';
+
+              }
+
+              tp();
+
+
+              setInterval(tp,30000);
+
+                </script>
 
            printf("<br> </span > Blind <br> C<img src="blind.png"> ding </img> <span style="color: black; font-size: 40%"> ");</span></h1> 
     
@@ -119,7 +137,7 @@ background {
                 <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
                   <rect class="shape" height="60" width="320" />
                 </svg>
-                 <a class="text">Samvid 2k18 </a>
+                 <a class="text" href="http://samvid.org.in">Samvid 2k18 </a>
               </div>
 
             <a  class="btn-rounded-white"> Register </a>
