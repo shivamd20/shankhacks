@@ -4,7 +4,14 @@ import React, { Component } from 'react';
 class Bot extends React.Component {
 
     state={
-        opened:false
+        opened:false,
+        steps:[
+            {
+                id: 'hello-world',
+                message: 'Hello World!',
+                end: true,
+            },
+        ]
     }
 
     render() {
@@ -29,13 +36,7 @@ class Bot extends React.Component {
 
                     recognitionEnable={true}
 
-                    steps={[
-                        {
-                            id: 'hello-world',
-                            message: 'Hello World!',
-                            end: true,
-                        },
-                    ]}
+                    steps={this.state.steps}
                 />
 
             </div>
