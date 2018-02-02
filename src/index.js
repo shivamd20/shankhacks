@@ -4,5 +4,17 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+var initialState = {
+
+    user : {
+        authToken:null,
+        userId:0,
+        name : 'visitor',
+
+       
+    }
+
+}
+
+ReactDOM.render(<App state = {initialState} />, document.getElementById('root'));
 registerServiceWorker();
